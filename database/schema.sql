@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS SafeBite;
 USE SafeBite;
 
 
@@ -47,8 +48,8 @@ CREATE TABLE IF NOT EXISTS Ingredient_Allergens (
 
 CREATE TABLE IF NOT EXISTS Users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    email VARCHAR(100)
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE
 );
 
 
